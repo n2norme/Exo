@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        {% block head %}
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        {% endblock %}
+    </head>
+
+    <body>
+
+        {% block content %}
+
+        <form action="http://localhost:5000/update_user" method="post">
+
+            <input type="text" value="{{data.get('id')}}" name="id">
+            <label> nom
+                <input type="text" value="{{data.get('nom')}}" name="nom">
+            </label>
+            <label> prénom
+                <input type="text" value="{{data.get('prenom')}}" name="prenom">
+            </label>
+            <input type="submit" value="envoyer">
+        </form>
+        {% endblock %}
+
+    </body>
+
+</html>
